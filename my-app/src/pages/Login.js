@@ -13,7 +13,11 @@ function Login() {
       return;
     }
     console.log('Username:', username);
+    sessionStorage.setItem('username', username);
     console.log('Password:', password);
+    sessionStorage.setItem('password', password);
+    window.location.href = '/#/posts';
+    window.location.reload();
   };
 
   useEffect(() => {
